@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle (Light / Dark Sketchbook Canvas)
+    const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function syncThemeIcon() {
+        const icon = document.getElementById('theme-icon');
+        if (!icon) return;
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = root.getAttribute('data-theme') === 'dark';
+            const nextTheme = isDark ? 'light' : 'dark';
+            if (nextTheme === 'dark') {
+                root.setAttribute('data-theme', 'dark');
+            } else {
+                root.removeAttribute('data-theme');
+            }
+            try {
+                localStorage.setItem('sendsnap_theme', nextTheme);
+            } catch (_) {}
+            syncThemeIcon();
+        });
+    }
+
     // Mobile navigation menu toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
@@ -8,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('show');
         });
 
-        // Close mobile menu when clicking a link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
@@ -16,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header scroll blur effect
+    // Header scroll shadow
     const header = document.getElementById('main-header');
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 30) {
+            if (window.scrollY > 24) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -35,10 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (question) {
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
-                // Optional: close other open items
                 faqItems.forEach(other => other.classList.remove('active'));
-
                 if (!isActive) {
                     item.classList.add('active');
                 }
@@ -46,12 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll for internal links
+    // Smooth scroll for internal anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
+            if (!targetId || targetId === '#') return;
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
@@ -63,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Re-initialize Lucide icons if dynamically modified
+    syncThemeIcon();
     if (window.lucide) {
         window.lucide.createIcons();
     }

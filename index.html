@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SendSnap - Lightning-Fast Offline File Transfer & P2P Sharing for Android</title>
-    
+    <title>SendSnap — Fast Offline P2P File & App Sharing (Android & Windows)</title>
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SendSnap is a high-speed, 100% offline peer-to-peer file transfer app for Android. Share large files, photos, 4K videos, and apps at up to 100 MB/s without internet, cables, or cloud limits.">
-    <meta name="keywords" content="offline file transfer, p2p file sharing, send files without internet, android airdrop alternative, fast file transfer app, local wifi transfer, sendsnap, high speed file sharing, qr code file share">
+    <meta name="description" content="SendSnap shares photos, 4K videos, installed Android apps, archives, and any file extension directly between Android and Windows PC at up to 100 MB/s — 100% offline, zero ads, zero cloud.">
+    <meta name="keywords" content="SendSnap, offline file transfer, local wifi file share, android to windows file transfer, peer to peer sharing, wifi direct share, apk transfer, no internet file share">
     <meta name="author" content="The 356 Company">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://youssef0356.github.io/sendsnap_website/">
-    <meta name="theme-color" content="#3B5BFE">
+    <meta name="theme-color" content="#2B50EC">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://youssef0356.github.io/sendsnap_website/">
-    <meta property="og:title" content="SendSnap - Lightning-Fast Offline File Transfer">
-    <meta property="og:description" content="Transfer large files, videos, and documents at up to 100 MB/s without internet. 100% offline, peer-to-peer, and zero mobile data usage.">
+    <meta property="og:title" content="SendSnap — Fast Offline P2P File & App Sharing">
+    <meta property="og:description" content="Share files and apps directly between Android and Windows PC over local Wi-Fi or Wi-Fi Direct at up to 100 MB/s. No internet, no cables, no cloud, no ads.">
     <meta property="og:image" content="https://youssef0356.github.io/sendsnap_website/assets/Banner.png">
     <meta property="og:site_name" content="SendSnap">
-    <meta property="og:locale" content="en_US">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://youssef0356.github.io/sendsnap_website/">
-    <meta name="twitter:title" content="SendSnap - Lightning-Fast Offline File Transfer">
-    <meta name="twitter:description" content="Transfer files at 100 MB/s without internet. 100% private and offline for Android.">
+    <meta name="twitter:title" content="SendSnap — Fast Offline P2P File & App Sharing">
+    <meta name="twitter:description" content="Direct device-to-device sharing at up to 100 MB/s for Android and Windows PC. 100% offline & ad-free.">
     <meta name="twitter:image" content="https://youssef0356.github.io/sendsnap_website/assets/Banner.png">
 
     <!-- Favicon -->
@@ -37,130 +34,61 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
+    <!-- Restore saved theme early to prevent flash -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('sendsnap_theme');
+                if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MobileApplication",
+          "@type": "SoftwareApplication",
           "@id": "https://youssef0356.github.io/sendsnap_website/#app",
           "name": "SendSnap",
-          "operatingSystem": "Android 7.0 and up",
+          "operatingSystem": "Android 7.0+, Windows 10/11 (x64)",
           "applicationCategory": "UtilitiesApplication",
-          "applicationSubCategory": "File Sharing",
+          "softwareVersion": "2.2.8",
           "downloadUrl": "https://play.google.com/store/apps/details?id=com.the356company.sendsnap",
-          "installUrl": "https://play.google.com/store/apps/details?id=com.the356company.sendsnap",
-          "description": "SendSnap is a lightning-fast offline peer-to-peer file transfer application for Android. Move gigabytes of photos, videos, audio, and documents at up to 100 MB/s without mobile data or internet access.",
+          "description": "Direct local peer-to-peer file and app transfer between Android and Windows PC at up to 100 MB/s using local HTTP/TCP sockets, UDP broadcast, mDNS/NSD, and Wi-Fi Direct.",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
           },
-          "screenshot": [
-            "https://youssef0356.github.io/sendsnap_website/assets/1.png",
-            "https://youssef0356.github.io/sendsnap_website/assets/2.png",
-            "https://youssef0356.github.io/sendsnap_website/assets/3.png",
-            "https://youssef0356.github.io/sendsnap_website/assets/4.png"
-          ],
-          "softwareVersion": "2.2.8",
-          "featureList": [
-            "100 MB/s local high-speed streaming",
-            "Clean Comic / Marker Sketch ink UI with Light & Dark Mode",
-            "Google Files-inspired Recents carousel with instant one-tap resend",
-            "Zero-delay LAN, mDNS/NSD & automatic Direct Wi-Fi discovery",
-            "Desktop multi-file finish studio with one-click Close All & Main Menu",
-            "Built-in multi-file Media Viewer & file explorer",
-            "100% offline, ad-free & zero mobile data consumption",
-            "Multi-file batch transfers with real-time transfer telemetry",
-            "Multilingual & RTL support (English, French, Arabic, Spanish)",
-            "Local network security with zero cloud uploads"
-          ],
           "author": {
             "@type": "Organization",
             "name": "The 356 Company",
             "url": "https://youssef0356.github.io/sendsnap_website/"
           }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://youssef0356.github.io/sendsnap_website/#website",
-          "url": "https://youssef0356.github.io/sendsnap_website/",
-          "name": "SendSnap",
-          "description": "Fast Peer-to-Peer Offline File Transfer App for Android"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://youssef0356.github.io/sendsnap_website/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is SendSnap?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "SendSnap is an Android file sharing application engineered for ultra-fast, offline peer-to-peer data transfers. It allows users to send photos, 4K videos, documents, music, and APKs between devices at speeds reaching up to 100 MB/s without an internet connection or cellular data."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does SendSnap transfer files without internet?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "SendSnap utilizes a high-performance local network streaming engine over Wi-Fi or Wi-Fi hotspot. Devices communicate directly with one another through local sockets, completely bypassing external cellular networks and internet servers."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How fast is SendSnap compared to Bluetooth?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Traditional Bluetooth file transfers max out around 2 to 3 MB/s. SendSnap streams data over high-speed local Wi-Fi frequencies reaching speeds up to 100 MB/s—making it up to 50 times faster than Bluetooth."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are my files private and secure when using SendSnap?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. SendSnap is 100% peer-to-peer. Your files never pass through or get saved on any cloud servers or remote databases. All data remains exclusively between the sender and receiver on the local Wi-Fi connection."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is there a limit on file size with SendSnap?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Unlike email or free cloud storage services that impose strict 25 MB or 2 GB limits, SendSnap supports unlimited file sizes. You can transfer massive video archives, complete photo libraries, and multi-gigabyte files seamlessly."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I pair devices using SendSnap?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "SendSnap features instant QR Code camera scanning. The receiving device displays a secure local QR code, and the sender scans it with their camera to instantly establish an authenticated local transfer connection."
-              }
-            }
-          ]
         }
       ]
     }
     </script>
 </head>
 <body>
-    <!-- Ambient Radial Glow Orbs -->
+    <!-- Subtle Sketchbook Corner Accents -->
     <div class="ambient-bg" aria-hidden="true">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
 
-    <!-- Navigation Bar -->
+    <!-- Sticky Navbar -->
     <header id="main-header">
         <div class="container">
             <nav aria-label="Main Navigation">
@@ -168,27 +96,26 @@
                     <img src="assets/app_icon.png" alt="SendSnap Icon" class="logo-icon">
                     <span class="logo-text">SendSnap</span>
                 </a>
-                
-                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
-                    <i data-lucide="menu"></i>
-                </button>
 
                 <div class="nav-links" id="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#showcase">Showcase</a>
-                    <a href="#comparison">Compare</a>
                     <a href="#how-it-works">How It Works</a>
+                    <a href="#tech-stack">What We Use</a>
+                    <a href="#comparison">Compare</a>
                     <a href="#faq">FAQ</a>
-                    <a href="privacy.html">Privacy</a>
                     <a href="https://github.com/Youssef0356/SendSnap" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-primary" style="background: linear-gradient(135deg, #0A58CA 0%, #0078D4 100%);">
-                        <i data-lucide="monitor" style="width: 17px; height: 17px;"></i>
-                        PC Download (.zip)
+                </div>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle Dark Mode" title="Switch Light / Dark Mode">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <a href="#download" class="btn-primary">
+                        <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                        <span>Download</span>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                        <i data-lucide="smartphone" style="width: 17px; height: 17px;"></i>
-                        Google Play
-                    </a>
+                    <button class="mobile-menu-btn" id="mobile-toggle" type="button" aria-label="Toggle navigation menu">
+                        <i data-lucide="menu"></i>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -200,12 +127,19 @@
             <div class="hero-content">
                 <div class="badge-pill">
                     <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
-                    SendSnap v2.2.8 • Android &amp; Windows PC • Comic Ink UI &amp; Dark Mode
+                    <span>v2.2.8 • Android &amp; Windows PC • 100% Ad-Free</span>
                 </div>
-                <h1>Lightning-Fast <span class="gradient-text">Offline</span> File Transfer.</h1>
-                <p>Transfer gigabytes of photos, 4K videos, and documents at up to 100 MB/s with zero ads, zero cables, and zero cloud uploads—now featuring our tactile Comic / Marker Sketch Ink UI, Dark Mode, Google Files-inspired Recents carousel, and Desktop Multi-File Finish Studio.</p>
-                
-                <div class="hero-btns">
+
+                <h1>
+                    Share Files &amp; Apps Offline at
+                    <span class="marker-highlight">100 MB/s</span>
+                </h1>
+
+                <p>
+                    Send photos, 4K videos, installed Android apps, archives, and any file extension directly between Android and Windows PC — no internet, no cables, no cloud, and zero ads.
+                </p>
+
+                <div class="hero-btns" id="download">
                     <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-playstore" aria-label="Get SendSnap on Google Play">
                         <svg viewBox="0 0 512 512" fill="currentColor">
                             <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#00D2FF"/>
@@ -215,143 +149,219 @@
                             <span class="btn-text-large">Google Play</span>
                         </div>
                     </a>
-                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows" aria-label="Download SendSnap for Windows PC (ZIP)">
+
+                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows" aria-label="Download SendSnap for Windows PC (.zip)">
                         <svg viewBox="0 0 88 88" fill="currentColor">
                             <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.001 45.728zm4.326-39.027L87.914 0v41.527l-47.918.376zm47.919 45.434V88l-47.919-6.734-.015-34.871z"/>
                         </svg>
                         <div class="btn-text">
-                            <span class="btn-text-small">DOWNLOAD FOR</span>
-                            <span class="btn-text-large">Windows (.zip)</span>
+                            <span class="btn-text-small">WINDOWS PC</span>
+                            <span class="btn-text-large">Download (.zip)</span>
                         </div>
                     </a>
-                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary" style="border-radius: 14px; padding: 0.75rem 1.2rem; font-weight: 600; text-decoration: none;" aria-label="Download SendSnap for Windows PC (RAR)">
+
+                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary" aria-label="Download SendSnap for Windows PC (.rar)">
                         <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
                         <span>Windows (.rar)</span>
                     </a>
                 </div>
 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <h4>100 MB/s</h4>
-                        <p>Peak Local Speed</p>
+                <div class="hero-facts">
+                    <div class="fact-chip">
+                        <i data-lucide="wifi"></i>
+                        <span>Local Wi-Fi &amp; Wi-Fi Direct</span>
                     </div>
-                    <div class="stat-item">
-                        <h4>0 MB</h4>
-                        <p>Data Plan Used</p>
+                    <div class="fact-chip">
+                        <i data-lucide="shield-check"></i>
+                        <span>Direct P2P • No Cloud</span>
                     </div>
-                    <div class="stat-item">
-                        <h4>100%</h4>
-                        <p>Offline & Private</p>
+                    <div class="fact-chip">
+                        <i data-lucide="infinity"></i>
+                        <span>Any File Size &amp; Extension</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Interactive Style A Sketch App Visual -->
             <div class="hero-visual">
-                <div class="hero-mockup-wrapper">
-                    <img src="assets/1.png" alt="SendSnap Offline File Transfer App Interface" class="hero-mockup-img" loading="eager">
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Grid -->
-        <section id="features" class="features container">
-            <div class="section-header">
-                <h2>Engineered for Raw Speed & Absolute Privacy</h2>
-                <p>SendSnap replaces slow Bluetooth and clumsy cloud drive uploads with modern peer-to-peer local streaming.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="zap"></i></div>
-                    <h3>Up to 100 MB/s Speeds</h3>
-                    <p>Stream massive video libraries and multi-gigabyte files in seconds utilizing high-frequency local Wi-Fi transfer pipelines.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="monitor-smartphone"></i></div>
-                    <h3>Desktop Multi-File Finish Studio</h3>
-                    <p>Two-pane Windows completion screen: preview or open any file in your batch, browse in Gallery View, reveal in Explorer, and return home with one click using <strong>Close All &amp; Main Menu</strong>.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="layers"></i></div>
-                    <h3>Interactive Cards Tray</h3>
-                    <p>View each selected file as a physical card with live previews. Drop file-per-file to different devices or grab "DRAG ALL" to send everything at once.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="sparkles"></i></div>
-                    <h3>Segmented Edge Portal</h3>
-                    <p>Drag files directly toward the screen edge. Ethereal feathered radial glows guide your gesture for effortless physical snapping.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="qr-code"></i></div>
-                    <h3>Zero-Delay Discovery &amp; Direct Wi-Fi</h3>
-                    <p>Pre-warmed LAN/NSD discovery, automatic Direct Wi-Fi &amp; Local Hotspot pairing without manual router setup, plus instant QR auto-join across devices.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="shield-check"></i></div>
-                    <h3>100% Offline, Private &amp; Ad-Free</h3>
-                    <p>Zero ads, zero tracking SDKs, zero cloud servers, and zero mobile data used. Your files travel strictly between your local devices.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="languages"></i></div>
-                    <h3>Multilingual & Native RTL</h3>
-                    <p>Full transcreation for English, French, Arabic (with complete RTL mirroring & Cairo typography), and Spanish. Switch instantly in Settings.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Visual App Showcase Gallery -->
-        <section id="showcase" class="container" style="padding: 3rem 1.5rem 5rem;">
-            <div class="section-header">
-                <h2>Designed with Apple-Grade Elegance</h2>
-                <p>Experience an intuitive glassmorphic interface crafted for modern Android devices.</p>
-            </div>
-
-            <div class="showcase-grid">
-                <div class="showcase-card">
-                    <img src="assets/1.png" alt="SendSnap Home Screen and Transfer Dashboard" loading="lazy">
-                    <div class="caption">
-                        <h4>Intuitive Dashboard</h4>
-                        <p>Quick access to send, receive, and view transfer history.</p>
+                <div class="sketch-app-card" aria-label="SendSnap Style A Interface Preview">
+                    <div class="sketch-topbar">
+                        <div class="sketch-brand">
+                            <img src="assets/app_icon.png" alt="SendSnap">
+                            <div>
+                                <div class="sketch-brand-title">SendSnap</div>
+                                <div class="sketch-brand-sub">My Android • Ready</div>
+                            </div>
+                        </div>
+                        <div class="sketch-status-badge">
+                            <span class="pulse-dot"></span>
+                            <span>Wi-Fi Connected</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="showcase-card">
-                    <img src="assets/2.png" alt="SendSnap In-App File Explorer and Gallery" loading="lazy">
-                    <div class="caption">
-                        <h4>In-App Media Picker</h4>
-                        <p>Categorized tabs for Photos, Videos, Audio, and Files.</p>
+                    <div class="sketch-hero-btn send">
+                        <div class="sketch-btn-badge">
+                            <i data-lucide="arrow-up" style="width: 22px; height: 22px;"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="sketch-btn-title">SEND</div>
+                            <div class="sketch-btn-sub">Photos, Videos, Apps &amp; Any File</div>
+                        </div>
+                        <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
                     </div>
-                </div>
 
-                <div class="showcase-card">
-                    <img src="assets/3.png" alt="SendSnap QR Code Scanner and Device Discovery" loading="lazy">
-                    <div class="caption">
-                        <h4>Camera QR Connect</h4>
-                        <p>Scan the QR code to pair devices instantly without passwords.</p>
+                    <div class="sketch-hero-btn receive">
+                        <div class="sketch-btn-badge">
+                            <i data-lucide="arrow-down" style="width: 22px; height: 22px;"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="sketch-btn-title">RECEIVE</div>
+                            <div class="sketch-btn-sub">Open local listener &amp; QR code</div>
+                        </div>
+                        <i data-lucide="qr-code" style="width: 18px; height: 18px;"></i>
                     </div>
-                </div>
 
-                <div class="showcase-card">
-                    <img src="assets/4.png" alt="SendSnap High-Speed Transfer Progress Gauge" loading="lazy">
-                    <div class="caption">
-                        <h4>Real-Time Telemetry</h4>
-                        <p>Watch live transfer speeds reach up to 100 MB/s with progress bars.</p>
+                    <div class="sketch-link-box">
+                        <span class="sketch-node">
+                            <i data-lucide="smartphone"></i>
+                            <span>Android</span>
+                        </span>
+                        <span class="sketch-pipe-tag">TCP Stream • 100 MB/s</span>
+                        <span class="sketch-node">
+                            <i data-lucide="monitor"></i>
+                            <span>Windows PC</span>
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Speed & Feature Comparison Section -->
-        <section id="comparison" class="comparison-section container">
+        <!-- Section 1: How the Sharing System Works -->
+        <section id="how-it-works" class="section-block container">
             <div class="section-header">
-                <h2>How SendSnap Compares</h2>
-                <p>See why users switch to SendSnap over outdated Bluetooth or slow cloud storage uploads.</p>
+                <span class="section-tag">How It Works</span>
+                <h2>Direct Device-to-Device in 3 Steps</h2>
+                <p>Zero internet servers in the middle. Your devices discover each other locally and stream files straight across your own Wi-Fi hardware.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Pick Any File or App</h3>
+                    <p>Tap <strong>Send</strong> to pick photos, 4K videos, installed Android apps (automatically named <code>AppName.apk</code>), archives, or tap <strong>Any File</strong> for any extension.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Auto-Find or Scan QR</h3>
+                    <p>Devices running SendSnap on the same Wi-Fi appear automatically. No router? Pair over <strong>Wi-Fi Direct</strong> or scan the receiver's QR code in one tap.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Stream Straight Across</h3>
+                    <p>Files stream over a direct local socket at up to <strong>100 MB/s</strong> into <code>Downloads/SendSnap</code> — then preview or open everything immediately.</p>
+                </div>
+            </div>
+
+            <!-- Visual Pipeline Architecture Strip -->
+            <div class="pipeline-box">
+                <div class="pipeline-label">Under the Hood — Local P2P Transfer Pipeline</div>
+                <div class="pipeline-flow">
+                    <div class="pipeline-stage">
+                        <strong>1. Sender Device</strong>
+                        <span>Android or Windows</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+                    <div class="pipeline-stage">
+                        <strong>2. Local Discovery</strong>
+                        <span>UDP • mDNS/NSD • Wi-Fi Direct</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+                    <div class="pipeline-stage">
+                        <strong>3. Direct Socket Stream</strong>
+                        <span>Local HTTP/TCP Server</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="pipeline-arrow"></i>
+                    <div class="pipeline-stage">
+                        <strong>4. Receiver Disk</strong>
+                        <span>Downloads/SendSnap</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: What We Use (Tech & Architecture) -->
+        <div id="features"></div>
+        <section id="tech-stack" class="section-block container">
+            <div class="section-header">
+                <span class="section-tag">What We Use</span>
+                <h2>Built on Fast, Transparent Local Protocols</h2>
+                <p>No cloud middlemen, no proprietary dongles, and no bloated SDKs — just native hardware networking wrapped in a clean Comic Ink UI.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon"><i data-lucide="zap"></i></div>
+                        <h3>Local HTTP / TCP Engine</h3>
+                    </div>
+                    <span class="tech-pill">Transport Layer</span>
+                    <p>Every receiver runs an embedded local HTTP/TCP socket server on port <code>53318</code> that streams raw bytes in large chunks with live speed and batch progress telemetry.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon green"><i data-lucide="radio"></i></div>
+                        <h3>UDP + mDNS / Android NSD</h3>
+                    </div>
+                    <span class="tech-pill">Zero-Delay Discovery</span>
+                    <p>Pre-warmed UDP multicast/broadcast pulses paired with native mDNS/NSD detect nearby phones and Windows PCs automatically as soon as you open SendSnap.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon yellow"><i data-lucide="qr-code"></i></div>
+                        <h3>Wi-Fi Direct &amp; QR Handoff</h3>
+                    </div>
+                    <span class="tech-pill">Routerless P2P</span>
+                    <p>When no shared router is available, Android's native Wi-Fi Direct (LocalOnlyHotspot / P2P) spins up a direct peer link with one-scan QR credentials.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon"><i data-lucide="cpu"></i></div>
+                        <h3>Flutter + Native Kotlin &amp; C++</h3>
+                    </div>
+                    <span class="tech-pill">Cross-Platform Stack</span>
+                    <p>Compiled natively via Flutter with custom Kotlin platform channels on Android (MediaStore, installed APK export) and a Windows C++ desktop runner with drag-and-drop &amp; system tray.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon green"><i data-lucide="shield-off"></i></div>
+                        <h3>Zero Cloud, Zero Ads, Zero Tracking</h3>
+                    </div>
+                    <span class="tech-pill">Strict Local Privacy</span>
+                    <p>SendSnap has no analytics SDKs, no ad networks, and no login servers. Your personal files travel only between devices inside your room.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-head">
+                        <div class="tech-icon yellow"><i data-lucide="palette"></i></div>
+                        <h3>Sketch Ink UI &amp; 4 Languages</h3>
+                    </div>
+                    <span class="tech-pill">UX &amp; Accessibility</span>
+                    <p>Crafted in Clean Comic / Marker Sketch style with Light &amp; Dark Mode, Google Files-style Recents, Desktop Multi-File Finish Studio, and full EN/FR/AR (RTL)/ES support.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Quick Comparison -->
+        <section id="comparison" class="section-block container">
+            <div class="section-header">
+                <span class="section-tag">Compare</span>
+                <h2>Why SendSnap Beats Bluetooth &amp; Cloud</h2>
             </div>
 
             <div class="comparison-wrapper">
@@ -359,178 +369,108 @@
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th class="col-sendsnap-header">SendSnap App</th>
+                            <th class="col-sendsnap-header">SendSnap</th>
                             <th>Bluetooth</th>
-                            <th>Cloud (Drive / WeTransfer)</th>
+                            <th>Cloud (Drive / Chat Apps)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Transfer Speed</strong></td>
-                            <td class="col-sendsnap"><strong>Up to 100 MB/s</strong></td>
-                            <td>~2 - 3 MB/s</td>
-                            <td>Limited by internet upload</td>
+                            <td><strong>Peak Speed</strong></td>
+                            <td class="col-sendsnap">Up to 100 MB/s (Wi-Fi 5/6)</td>
+                            <td>~2 – 3 MB/s</td>
+                            <td>Capped by internet upload</td>
                         </tr>
                         <tr>
-                            <td><strong>Internet / Data Needed</strong></td>
-                            <td class="col-sendsnap"><strong>None (100% Offline)</strong></td>
-                            <td>None</td>
-                            <td>High cellular data consumption</td>
+                            <td><strong>Internet Required</strong></td>
+                            <td class="col-sendsnap">No (100% Offline)</td>
+                            <td>No</td>
+                            <td>Yes + mobile data cost</td>
                         </tr>
                         <tr>
-                            <td><strong>File Size Limits</strong></td>
-                            <td class="col-sendsnap"><strong>Unlimited</strong></td>
-                            <td>Fails frequently on large files</td>
-                            <td>2 GB limit on free plans</td>
+                            <td><strong>File Size &amp; Types</strong></td>
+                            <td class="col-sendsnap">Unlimited • Apps &amp; Any Extension</td>
+                            <td>Drops large files often</td>
+                            <td>Compresses media / 2 GB caps</td>
                         </tr>
                         <tr>
-                            <td><strong>Privacy & Security</strong></td>
-                            <td class="col-sendsnap"><strong>Direct P2P, No Cloud Server</strong></td>
+                            <td><strong>Privacy &amp; Cost</strong></td>
+                            <td class="col-sendsnap">Direct P2P • Zero Ads • Free</td>
                             <td>Direct P2P</td>
-                            <td>Stored on remote 3rd-party servers</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pairing Experience</strong></td>
-                            <td class="col-sendsnap"><strong>Instant Camera QR Scan</strong></td>
-                            <td>Slow Bluetooth discovery & PINs</td>
-                            <td>Account signup & email links</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Batch Multi-File Sharing</strong></td>
-                            <td class="col-sendsnap"><strong>Integrated Batch Pipeline</strong></td>
-                            <td>One file at a time</td>
-                            <td>Slow zipped archive uploads</td>
+                            <td>Stored on remote servers</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="container" style="padding: 4rem 1.5rem 5rem;">
+        <!-- Section 4: Direct FAQ -->
+        <section id="faq" class="section-block container">
             <div class="section-header">
-                <h2>Three Steps. Zero Hassle.</h2>
-                <p>Transferring files between Android devices has never been this effortless.</p>
-            </div>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>Select Your Files</h4>
-                    <p>Open SendSnap and tap <strong>Send</strong>. Choose any combination of photos, videos, music, APKs, or documents from the built-in media picker.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>Scan Receiver's QR</h4>
-                    <p>The receiver taps <strong>Receive</strong> to generate a local QR code. Point your camera to scan and authenticate within a fraction of a second.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>Stream at Warp Speed</h4>
-                    <p>Watch your files fly across devices at speeds up to 100 MB/s with real-time transfer progress and complete offline security.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Frequently Asked Questions (FAQ) Section -->
-        <section id="faq" class="faq-section container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about SendSnap's offline peer-to-peer sharing technology.</p>
+                <span class="section-tag">FAQ</span>
+                <h2>Common Questions, Direct Answers</h2>
             </div>
 
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is SendSnap and how does it work?</span>
+                        <span>Do I need internet or mobile data to use SendSnap?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>SendSnap is a premier offline peer-to-peer file transfer app designed for Android. It sets up an ultra-fast local socket connection between two devices over local Wi-Fi or Wi-Fi hotspot. Files are streamed directly between devices without ever traveling across the internet.</p>
+                        <p>No. SendSnap runs strictly over your local Wi-Fi network, mobile hotspot, or Wi-Fi Direct. You can transfer gigabytes with zero internet access and zero SIM data usage.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Do I need an active internet connection or mobile data plan?</span>
+                        <span>Can I send installed apps and any file extension?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>No! SendSnap is 100% offline. You do not need mobile data, an internet connection, or cellular reception. Both devices just need to be on the same local Wi-Fi network or connected via portable Wi-Fi hotspot.</p>
+                        <p>Yes. Tap <strong>Send</strong> and open the <strong>Apps</strong> tab to pick any installed Android app or <code>.apk</code>, open <strong>Archives</strong> for <code>.zip/.rar/.7z/.exe</code>, or tap <strong>Any File</strong> to browse every extension on your device.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is the maximum transfer speed?</span>
+                        <span>Does SendSnap work between Android and Windows PC?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Depending on your hardware and Wi-Fi capability (such as 5GHz Wi-Fi or Wi-Fi 6), SendSnap achieves speeds of up to 100 MB/s (800 Mbps). That means a 2 GB 4K video can transfer in under 25 seconds.</p>
+                        <p>Yes! Download the portable Windows 64-bit release (<code>.zip</code> or <code>.rar</code>) above — no installer required. You can drag files straight onto discovered phones or use the two-pane Desktop Finish Studio to open or preview batches.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Are my files private and secure?</span>
+                        <span>Are my files uploaded to any cloud server?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Completely. Because SendSnap operates entirely peer-to-peer over your local network, your personal photos, videos, and confidential documents never touch any cloud servers or external databases.</p>
+                        <p>Never. Data streams directly from the sender's local socket to the receiver's local disk. Nothing is ever uploaded, logged, or tracked.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What permissions does SendSnap require and why?</span>
+                        <span>Where are received files saved?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>SendSnap asks only for the permissions necessary to transfer files: Camera (to scan the receiver's QR code), Storage/Media access (to let you select files and save received downloads to your device), and Wi-Fi access (to establish the local P2P transfer socket). We never access your photos or files without your direct action.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Does SendSnap work on Windows PC?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! SendSnap v2.2.8 includes a standalone portable Windows (64-bit) release as both <code>.zip</code> and <code>.rar</code> right on this page (and source on GitHub). It features the new Comic / Marker Sketch Ink UI, Dark Mode, Google Files-inspired Recents carousel, and a two-pane multi-file finish studio so you can open or preview any file and close back to the main menu in one click.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How does multi-file sending work?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>When multiple files are selected, SendSnap displays a cards container. You can drop individual file cards to different nearby devices, or grab the "DRAG ALL" master handle to send the entire batch in one gesture.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is there any file size limit?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No. You can send files of any size—from small documents to massive multi-gigabyte video libraries or system archives. The only limit is the free storage capacity on the receiving device.</p>
+                        <p>All received files are saved cleanly in <code>Downloads/SendSnap</code> on both Android and Windows, and you can also view or manage them directly in the app's <strong>Recents</strong> carousel and <strong>Received Library</strong>.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final Call to Action Banner -->
+        <!-- Final CTA -->
         <section class="container">
             <div class="cta-banner">
-                <h2>Ready for Instant, Offline File Transfers?</h2>
-                <p>Join thousands of users sharing photos, 4K videos, and documents at lightning speed without cables or cellular data.</p>
+                <h2>Ready to Share Without Limits?</h2>
+                <p>Get SendSnap on Android and Windows PC — fast, offline, open source on GitHub, and 100% ad-free.</p>
                 <div class="cta-buttons">
-                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-playstore" aria-label="Download SendSnap on Google Play">
+                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-playstore">
                         <svg viewBox="0 0 512 512" fill="currentColor">
                             <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#00D2FF"/>
                         </svg>
@@ -539,16 +479,18 @@
                             <span class="btn-text-large">Google Play</span>
                         </div>
                     </a>
-                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows" aria-label="Download SendSnap for Windows PC (ZIP)">
+
+                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows">
                         <svg viewBox="0 0 88 88" fill="currentColor">
                             <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.001 45.728zm4.326-39.027L87.914 0v41.527l-47.918.376zm47.919 45.434V88l-47.919-6.734-.015-34.871z"/>
                         </svg>
                         <div class="btn-text">
-                            <span class="btn-text-small">DOWNLOAD FOR</span>
-                            <span class="btn-text-large">Windows (.zip)</span>
+                            <span class="btn-text-small">WINDOWS PC</span>
+                            <span class="btn-text-large">Download (.zip)</span>
                         </div>
                     </a>
-                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary" style="border-radius: 14px; padding: 0.75rem 1.2rem; font-weight: 600; text-decoration: none;" aria-label="Download SendSnap for Windows PC (RAR)">
+
+                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary">
                         <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
                         <span>Windows (.rar)</span>
                     </a>
@@ -563,30 +505,25 @@
             <div class="footer-brand">
                 <a href="index.html" class="logo-wrapper">
                     <img src="assets/app_icon.png" alt="SendSnap Icon" class="logo-icon" style="width: 32px; height: 32px;">
-                    <span class="logo-text" style="font-size: 1.25rem;">SendSnap</span>
+                    <span class="logo-text" style="font-size: 1.18rem;">SendSnap</span>
                 </a>
-                <p>Ultra-fast, privacy-first peer-to-peer offline file sharing for Android.</p>
+                <p>Fast offline peer-to-peer file &amp; app sharing for Android and Windows PC.</p>
             </div>
 
             <div class="footer-links">
-                <a href="#features">Features</a>
-                <a href="#comparison">Compare</a>
                 <a href="#how-it-works">How It Works</a>
+                <a href="#tech-stack">What We Use</a>
                 <a href="#faq">FAQ</a>
                 <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+                <a href="terms.html">Terms</a>
                 <a href="https://github.com/Youssef0356/SendSnap" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:nejiyoussef081@gmail.com">Contact Support</a>
+                <a href="mailto:nejiyoussef081@gmail.com">Support</a>
             </div>
-            
-            <p>&copy; 2026 The 356 Company. All rights reserved.</p>
+
+            <p>&copy; 2026 The 356 Company • SendSnap v2.2.8</p>
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
