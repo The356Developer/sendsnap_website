@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle (Light / Dark Sketchbook Canvas)
+    // 1. Theme Toggle (Light / Dark Mode)
     const themeToggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile navigation menu toggle
+    // 2. Mobile Navigation Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
 
@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header scroll shadow
+    // 3. Header Scroll Elevation
     const header = document.getElementById('main-header');
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 24) {
+            if (window.scrollY > 20) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -57,7 +57,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // FAQ Accordion
+    // 4. Platform Download Tabs & OS Auto-Detection
+    function detectPlatform() {
+        const ua = (navigator.userAgent || '').toLowerCase();
+        if (/android/i.test(ua)) return 'android';
+        if (/linux/i.test(ua) && !/android/i.test(ua)) return 'linux';
+        if (/win/i.test(ua)) return 'windows';
+        return 'windows';
+    }
+
+    function switchPlatformTab(platform) {
+        const tabs = document.querySelectorAll('.platform-tab');
+        const panels = document.querySelectorAll('.platform-panel');
+
+        tabs.forEach(tab => {
+            const matches = tab.getAttribute('data-platform') === platform;
+            tab.classList.toggle('active', matches);
+            tab.setAttribute('aria-selected', matches ? 'true' : 'false');
+        });
+
+        panels.forEach(panel => {
+            const matches = panel.getAttribute('id') === `panel-${platform}`;
+            panel.classList.toggle('active', matches);
+        });
+
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    const platformTabs = document.querySelectorAll('.platform-tab');
+    if (platformTabs.length > 0) {
+        platformTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const platform = tab.getAttribute('data-platform');
+                if (platform) {
+                    switchPlatformTab(platform);
+                }
+            });
+        });
+
+        // Set default based on detected OS
+        const detected = detectPlatform();
+        switchPlatformTab(detected);
+    }
+
+    // 5. FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
@@ -72,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll for internal anchor links
+    // 6. Smooth Scroll for Internal Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');

@@ -23,4 +23,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://youssef0356.github.io/sendsnap_website/sitemap.xml
+Sitemap: https://the356developer.github.io/sendsnap_website/sitemap.xml

@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SendSnap — Fast Offline P2P File & App Sharing (Android, Windows & Linux)</title>
+    <title>SendSnap — Fast Offline P2P File &amp; App Sharing (Android, Windows &amp; Linux)</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="SendSnap shares photos, 4K videos, installed Android apps, archives, and any file extension directly between Android, Windows PC, and Linux at up to 100 MB/s — 100% offline, zero ads, zero cloud.">
     <meta name="keywords" content="SendSnap, offline file transfer, local wifi file share, android to windows file transfer, linux file transfer, peer to peer sharing, wifi direct share, apk transfer, no internet file share">
     <meta name="author" content="The 356 Company">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://youssef0356.github.io/sendsnap_website/">
-    <meta name="theme-color" content="#2B50EC">
+    <link rel="canonical" href="https://the356developer.github.io/sendsnap_website/">
+    <meta name="theme-color" content="#2563EB">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://youssef0356.github.io/sendsnap_website/">
-    <meta property="og:title" content="SendSnap — Fast Offline P2P File & App Sharing">
+    <meta property="og:url" content="https://the356developer.github.io/sendsnap_website/">
+    <meta property="og:title" content="SendSnap — Fast Offline P2P File &amp; App Sharing">
     <meta property="og:description" content="Share files and apps directly between Android, Windows PC, and Linux over local Wi-Fi or Wi-Fi Direct at up to 100 MB/s. No internet, no cables, no cloud, no ads.">
-    <meta property="og:image" content="https://youssef0356.github.io/sendsnap_website/assets/Banner.png">
+    <meta property="og:image" content="https://the356developer.github.io/sendsnap_website/assets/Banner.png">
     <meta property="og:site_name" content="SendSnap">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SendSnap — Fast Offline P2P File & App Sharing">
-    <meta name="twitter:description" content="Direct device-to-device sharing at up to 100 MB/s for Android, Windows PC, and Linux. 100% offline & ad-free.">
-    <meta name="twitter:image" content="https://youssef0356.github.io/sendsnap_website/assets/Banner.png">
+    <meta name="twitter:title" content="SendSnap — Fast Offline P2P File &amp; App Sharing">
+    <meta name="twitter:description" content="Direct device-to-device sharing at up to 100 MB/s for Android, Windows PC, and Linux. 100% offline &amp; ad-free.">
+    <meta name="twitter:image" content="https://the356developer.github.io/sendsnap_website/assets/Banner.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/app_icon.png">
     <link rel="apple-touch-icon" href="assets/app_icon.png">
 
     <!-- CSS & Fonts -->
-    <link rel="stylesheet" href="style.css?v=2.2.9-linux">
+    <link rel="stylesheet" href="style.css?v=2.3.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -58,7 +58,7 @@
       "@graph": [
         {
           "@type": "SoftwareApplication",
-          "@id": "https://youssef0356.github.io/sendsnap_website/#app",
+          "@id": "https://the356developer.github.io/sendsnap_website/#app",
           "name": "SendSnap",
           "operatingSystem": "Android 7.0+, Windows 10/11 (x64), Linux (x64 AppImage/deb)",
           "applicationCategory": "UtilitiesApplication",
@@ -73,7 +73,7 @@
           "author": {
             "@type": "Organization",
             "name": "The 356 Company",
-            "url": "https://youssef0356.github.io/sendsnap_website/"
+            "url": "https://the356developer.github.io/sendsnap_website/"
           }
         }
       ]
@@ -81,11 +81,10 @@
     </script>
 </head>
 <body>
-    <!-- Subtle Sketchbook Corner Accents -->
+    <!-- Subtle Ambient Background Lights -->
     <div class="ambient-bg" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
     </div>
 
     <!-- Sticky Navbar -->
@@ -109,9 +108,9 @@
                     <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle Dark Mode" title="Switch Light / Dark Mode">
                         <i data-lucide="moon" id="theme-icon"></i>
                     </button>
-                    <a href="#download" class="btn-primary">
-                        <i data-lucide="download" style="width: 16px; height: 16px;"></i>
-                        <span>Download</span>
+                    <a href="#download" class="btn-nav-download">
+                        <i data-lucide="download" style="width: 15px; height: 15px;"></i>
+                        <span>Get SendSnap</span>
                     </a>
                     <button class="mobile-menu-btn" id="mobile-toggle" type="button" aria-label="Toggle navigation menu">
                         <i data-lucide="menu"></i>
@@ -126,64 +125,119 @@
         <section class="hero container">
             <div class="hero-content">
                 <div class="badge-pill">
-                    <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                    <span class="pulse-indicator"></span>
                     <span>v2.2.9 • Android, Windows &amp; Linux • 100% Ad-Free</span>
                 </div>
 
                 <h1>
                     Share Files &amp; Apps Offline at
-                    <span class="marker-highlight">100 MB/s</span>
+                    <span class="gradient-text">100 MB/s</span>
                 </h1>
 
-                <p>
-                    Send photos, 4K videos, installed Android apps, archives, and any file extension directly between Android, Windows PC, and Linux — no internet, no cables, no cloud, and zero ads.
+                <p class="hero-description">
+                    Send photos, 4K videos, installed Android apps, archives, and any file directly between Android, Windows PC, and Linux — no internet, no cables, no cloud, and zero ads.
                 </p>
 
-                <div class="hero-btns" id="download">
-                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-playstore" aria-label="Get SendSnap on Google Play">
-                        <svg viewBox="0 0 512 512" fill="currentColor">
-                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#00D2FF"/>
-                        </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">GET IT ON</span>
-                            <span class="btn-text-large">Google Play</span>
+                <!-- Modern Segmented Download Hub -->
+                <div class="download-hub" id="download">
+                    <div class="platform-tabs" role="tablist" aria-label="Select Operating System">
+                        <button class="platform-tab active" data-platform="windows" role="tab" aria-selected="true">
+                            <svg viewBox="0 0 88 88" fill="currentColor" class="tab-svg">
+                                <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.001 45.728zm4.326-39.027L87.914 0v41.527l-47.918.376zm47.919 45.434V88l-47.919-6.734-.015-34.871z"/>
+                            </svg>
+                            <span>Windows</span>
+                        </button>
+
+                        <button class="platform-tab" data-platform="linux" role="tab" aria-selected="false">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="tab-svg">
+                                <path d="M12.504 0c-.155 0-.313.008-.471.02-3.134.256-4.99 2.47-5.021 5.92-.016 1.77.37 3.518.73 5.228-.68.618-1.36 1.258-1.996 1.942-1.42 1.528-2.584 3.328-3.32 5.318-.46 1.246-.713 2.56-.708 3.918 0 .428.17.84.472 1.142.302.303.714.472 1.142.472 1.488 0 2.918-.456 4.14-1.317 1.348.887 2.923 1.357 4.528 1.357s3.18-.47 4.528-1.357c1.222.86 2.652 1.317 4.14 1.317.428 0 .84-.17 1.142-.472.303-.302.472-.714.472-1.142.005-1.358-.248-2.672-.708-3.918-.736-1.99-1.9-3.79-3.32-5.318-.636-.684-1.316-1.324-1.996-1.942.36-1.71.746-3.458.73-5.228-.031-3.45-1.887-5.664-5.02-5.92-.158-.012-.316-.02-.472-.02zm-.004 2c2.09.006 3.004 1.442 3.024 3.957.012 1.54-.34 3.197-.684 4.813l-.13.61.5.378c.867.658 1.7 1.378 2.477 2.152 1.248 1.244 2.247 2.723 2.87 4.316.33.844.53 1.74.58 2.656-.84-.162-1.722-.508-2.52-1.026l-.68-.44-.658.472c-1.372.985-2.99 1.508-4.66 1.508s-3.288-.523-4.66-1.508l-.658-.472-.68.44c-.798.518-1.68.864-2.52 1.026.05-.916.25-1.812.58-2.656.623-1.593 1.622-3.072 2.87-4.316.777-.774 1.61-1.494 2.477-2.152l.5-.378-.13-.61c-.344-1.616-.696-3.273-.684-4.813.02-2.515.934-3.951 3.024-3.957z"/>
+                            </svg>
+                            <span>Linux</span>
+                        </button>
+
+                        <button class="platform-tab" data-platform="android" role="tab" aria-selected="false">
+                            <svg viewBox="0 0 512 512" fill="currentColor" class="tab-svg">
+                                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                            </svg>
+                            <span>Android</span>
+                        </button>
+                    </div>
+
+                    <!-- Windows Panel -->
+                    <div class="platform-panel active" id="panel-windows" role="tabpanel">
+                        <div class="panel-action-row">
+                            <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-hub-primary">
+                                <i data-lucide="download"></i>
+                                <div class="btn-hub-text">
+                                    <span class="hub-title">Download for Windows x64</span>
+                                    <span class="hub-subtitle">Portable ZIP • Ready to run</span>
+                                </div>
+                            </a>
+                            <div class="panel-alternatives">
+                                <span class="alt-caption">Also available as:</span>
+                                <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="chip-alt">
+                                    <i data-lucide="archive" style="width: 14px; height: 14px;"></i>
+                                    <span>.rar archive</span>
+                                </a>
+                            </div>
                         </div>
-                    </a>
-
-                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows" aria-label="Download SendSnap for Windows PC (.zip)">
-                        <svg viewBox="0 0 88 88" fill="currentColor">
-                            <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.001 45.728zm4.326-39.027L87.914 0v41.527l-47.918.376zm47.919 45.434V88l-47.919-6.734-.015-34.871z"/>
-                        </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">WINDOWS PC</span>
-                            <span class="btn-text-large">Download (.zip)</span>
+                        <div class="panel-meta-info">
+                            <span><i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i> Windows 10 &amp; 11 (64-bit)</span>
+                            <span>•</span>
+                            <span>No installation required</span>
+                            <span>•</span>
+                            <span>v2.2.9</span>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="downloads/SendSnap-x86_64.AppImage" download="SendSnap-x86_64.AppImage" class="btn-linux" aria-label="Download SendSnap for Linux (.AppImage)">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.504 0c-.155 0-.313.008-.471.02-3.134.256-4.99 2.47-5.021 5.92-.016 1.77.37 3.518.73 5.228-.68.618-1.36 1.258-1.996 1.942-1.42 1.528-2.584 3.328-3.32 5.318-.46 1.246-.713 2.56-.708 3.918 0 .428.17.84.472 1.142.302.303.714.472 1.142.472 1.488 0 2.918-.456 4.14-1.317 1.348.887 2.923 1.357 4.528 1.357s3.18-.47 4.528-1.357c1.222.86 2.652 1.317 4.14 1.317.428 0 .84-.17 1.142-.472.303-.302.472-.714.472-1.142.005-1.358-.248-2.672-.708-3.918-.736-1.99-1.9-3.79-3.32-5.318-.636-.684-1.316-1.324-1.996-1.942.36-1.71.746-3.458.73-5.228-.031-3.45-1.887-5.664-5.02-5.92-.158-.012-.316-.02-.472-.02zm-.004 2c2.09.006 3.004 1.442 3.024 3.957.012 1.54-.34 3.197-.684 4.813l-.13.61.5.378c.867.658 1.7 1.378 2.477 2.152 1.248 1.244 2.247 2.723 2.87 4.316.33.844.53 1.74.58 2.656-.84-.162-1.722-.508-2.52-1.026l-.68-.44-.658.472c-1.372.985-2.99 1.508-4.66 1.508s-3.288-.523-4.66-1.508l-.658-.472-.68.44c-.798.518-1.68.864-2.52 1.026.05-.916.25-1.812.58-2.656.623-1.593 1.622-3.072 2.87-4.316.777-.774 1.61-1.494 2.477-2.152l.5-.378-.13-.61c-.344-1.616-.696-3.273-.684-4.813.02-2.515.934-3.951 3.024-3.957z"/>
-                        </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">LINUX x64</span>
-                            <span class="btn-text-large">Download (.AppImage)</span>
+                    <!-- Linux Panel -->
+                    <div class="platform-panel" id="panel-linux" role="tabpanel">
+                        <div class="panel-action-row">
+                            <a href="downloads/SendSnap-x86_64.AppImage" download="SendSnap-x86_64.AppImage" class="btn-hub-primary">
+                                <i data-lucide="download"></i>
+                                <div class="btn-hub-text">
+                                    <span class="hub-title">Download for Linux</span>
+                                    <span class="hub-subtitle">Universal AppImage (x86_64)</span>
+                                </div>
+                            </a>
+                            <div class="panel-alternatives">
+                                <span class="alt-caption">Packages:</span>
+                                <a href="downloads/sendsnap_2.2.9_amd64.deb" download="sendsnap_2.2.9_amd64.deb" class="chip-alt">
+                                    <i data-lucide="package" style="width: 14px; height: 14px;"></i>
+                                    <span>Ubuntu / Debian (.deb)</span>
+                                </a>
+                                <a href="downloads/sendsnap-linux-x64.tar.gz" download="sendsnap-linux-x64.tar.gz" class="chip-alt">
+                                    <i data-lucide="archive" style="width: 14px; height: 14px;"></i>
+                                    <span>Portable (.tar.gz)</span>
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                        <div class="panel-meta-info">
+                            <span><i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i> Ubuntu, Debian, Fedora, Arch &amp; more</span>
+                            <span>•</span>
+                            <span>v2.2.9</span>
+                        </div>
+                    </div>
 
-                    <a href="downloads/sendsnap_2.2.9_amd64.deb" download="sendsnap_2.2.9_amd64.deb" class="btn-secondary" aria-label="Download SendSnap for Linux (.deb)">
-                        <i data-lucide="package" style="width: 18px; height: 18px;"></i>
-                        <span>Linux (.deb)</span>
-                    </a>
-
-                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary" aria-label="Download SendSnap for Windows PC (.rar)">
-                        <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
-                        <span>Windows (.rar)</span>
-                    </a>
-
-                    <a href="downloads/sendsnap-linux-x64.tar.gz" download="sendsnap-linux-x64.tar.gz" class="btn-secondary" aria-label="Download SendSnap for Linux (.tar.gz)">
-                        <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
-                        <span>Linux (.tar.gz)</span>
-                    </a>
+                    <!-- Android Panel -->
+                    <div class="platform-panel" id="panel-android" role="tabpanel">
+                        <div class="panel-action-row">
+                            <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-hub-primary btn-playstore-theme">
+                                <svg viewBox="0 0 512 512" fill="currentColor" style="width: 20px; height: 20px;">
+                                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                                </svg>
+                                <div class="btn-hub-text">
+                                    <span class="hub-title">Get on Google Play</span>
+                                    <span class="hub-subtitle">Official Android Release</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-meta-info">
+                            <span><i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i> Android 7.0 (Nougat) and up</span>
+                            <span>•</span>
+                            <span>100% Ad-Free &amp; Offline</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="hero-facts">
@@ -202,55 +256,63 @@
                 </div>
             </div>
 
-            <!-- Interactive Style A Sketch App Visual -->
+            <!-- Modern Device Preview Card -->
             <div class="hero-visual">
-                <div class="sketch-app-card" aria-label="SendSnap Style A Interface Preview">
-                    <div class="sketch-topbar">
-                        <div class="sketch-brand">
-                            <img src="assets/app_icon.png" alt="SendSnap">
+                <div class="app-preview-card" aria-label="SendSnap Modern Interface Preview">
+                    <div class="preview-topbar">
+                        <div class="preview-brand">
+                            <img src="assets/app_icon.png" alt="SendSnap Icon" class="preview-icon">
                             <div>
-                                <div class="sketch-brand-title">SendSnap</div>
-                                <div class="sketch-brand-sub">My Android • Ready</div>
+                                <div class="preview-name">SendSnap</div>
+                                <div class="preview-status-sub">My Device • Ready</div>
                             </div>
                         </div>
-                        <div class="sketch-status-badge">
-                            <span class="pulse-dot"></span>
+                        <div class="preview-badge-status">
+                            <span class="live-dot"></span>
                             <span>Wi-Fi Connected</span>
                         </div>
                     </div>
 
-                    <div class="sketch-hero-btn send">
-                        <div class="sketch-btn-badge">
-                            <i data-lucide="arrow-up" style="width: 22px; height: 22px;"></i>
+                    <div class="preview-actions">
+                        <div class="preview-action-btn action-send">
+                            <div class="action-icon-circle">
+                                <i data-lucide="arrow-up"></i>
+                            </div>
+                            <div class="action-copy">
+                                <div class="action-label">SEND</div>
+                                <div class="action-desc">Photos, 4K Videos, APKs &amp; Files</div>
+                            </div>
+                            <i data-lucide="arrow-right" class="action-arrow"></i>
                         </div>
-                        <div style="flex: 1;">
-                            <div class="sketch-btn-title">SEND</div>
-                            <div class="sketch-btn-sub">Photos, Videos, Apps &amp; Any File</div>
+
+                        <div class="preview-action-btn action-receive">
+                            <div class="action-icon-circle">
+                                <i data-lucide="arrow-down"></i>
+                            </div>
+                            <div class="action-copy">
+                                <div class="action-label">RECEIVE</div>
+                                <div class="action-desc">Open local listener &amp; QR code</div>
+                            </div>
+                            <i data-lucide="qr-code" class="action-arrow"></i>
                         </div>
-                        <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
                     </div>
 
-                    <div class="sketch-hero-btn receive">
-                        <div class="sketch-btn-badge">
-                            <i data-lucide="arrow-down" style="width: 22px; height: 22px;"></i>
+                    <!-- Live Transfer Stream Mockup -->
+                    <div class="preview-transfer-widget">
+                        <div class="transfer-head">
+                            <div class="transfer-title">
+                                <i data-lucide="file-video" style="width: 15px; height: 15px;"></i>
+                                <span>Vacation_4K_Trip.mp4</span>
+                            </div>
+                            <span class="transfer-speed">98.4 MB/s</span>
                         </div>
-                        <div style="flex: 1;">
-                            <div class="sketch-btn-title">RECEIVE</div>
-                            <div class="sketch-btn-sub">Open local listener &amp; QR code</div>
+                        <div class="transfer-progress-track">
+                            <div class="transfer-progress-fill"></div>
                         </div>
-                        <i data-lucide="qr-code" style="width: 18px; height: 18px;"></i>
-                    </div>
-
-                    <div class="sketch-link-box">
-                        <span class="sketch-node">
-                            <i data-lucide="smartphone"></i>
-                            <span>Android</span>
-                        </span>
-                        <span class="sketch-pipe-tag">TCP Stream • 100 MB/s</span>
-                        <span class="sketch-node">
-                            <i data-lucide="monitor"></i>
-                            <span>Windows / Linux</span>
-                        </span>
+                        <div class="transfer-foot">
+                            <span>Direct TCP Socket • 2.4 GB / 3.1 GB</span>
+                            <span>78%</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,7 +323,7 @@
             <div class="section-header">
                 <span class="section-tag">How It Works</span>
                 <h2>Direct Device-to-Device in 3 Steps</h2>
-                <p>Zero internet servers in the middle. Your devices discover each other locally and stream files straight across your own Wi-Fi hardware.</p>
+                <p>Zero internet servers in the middle. Your devices discover each other locally and stream files straight across your Wi-Fi hardware.</p>
             </div>
 
             <div class="steps-grid">
@@ -280,7 +342,7 @@
                 <div class="step-card">
                     <div class="step-num">3</div>
                     <h3>Stream Straight Across</h3>
-                    <p>Files stream over a direct local socket at up to <strong>100 MB/s</strong> into <code>Downloads/SendSnap</code> — then preview or open everything immediately.</p>
+                    <p>Files stream over a direct local socket at up to <strong>100 MB/s</strong> into <code>Downloads/SendSnap</code> — preview or open everything immediately.</p>
                 </div>
             </div>
 
@@ -290,7 +352,7 @@
                 <div class="pipeline-flow">
                     <div class="pipeline-stage">
                         <strong>1. Sender Device</strong>
-                        <span>Android or Windows</span>
+                        <span>Android, Windows or Linux</span>
                     </div>
                     <i data-lucide="arrow-right" class="pipeline-arrow"></i>
                     <div class="pipeline-stage">
@@ -317,13 +379,13 @@
             <div class="section-header">
                 <span class="section-tag">What We Use</span>
                 <h2>Built on Fast, Transparent Local Protocols</h2>
-                <p>No cloud middlemen, no proprietary dongles, and no bloated SDKs — just native hardware networking wrapped in a clean Comic Ink UI.</p>
+                <p>No cloud middlemen, no proprietary dongles, and no bloated SDKs — just native hardware networking in a modern interface.</p>
             </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon"><i data-lucide="zap"></i></div>
+                        <div class="tech-icon icon-blue"><i data-lucide="zap"></i></div>
                         <h3>Local HTTP / TCP Engine</h3>
                     </div>
                     <span class="tech-pill">Transport Layer</span>
@@ -332,16 +394,16 @@
 
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon green"><i data-lucide="radio"></i></div>
+                        <div class="tech-icon icon-emerald"><i data-lucide="radio"></i></div>
                         <h3>UDP + mDNS / Android NSD</h3>
                     </div>
                     <span class="tech-pill">Zero-Delay Discovery</span>
-                    <p>Pre-warmed UDP multicast/broadcast pulses paired with native mDNS/NSD detect nearby phones and Windows PCs automatically as soon as you open SendSnap.</p>
+                    <p>Pre-warmed UDP multicast/broadcast pulses paired with native mDNS/NSD detect nearby phones, Windows PCs, and Linux machines automatically.</p>
                 </div>
 
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon yellow"><i data-lucide="qr-code"></i></div>
+                        <div class="tech-icon icon-amber"><i data-lucide="qr-code"></i></div>
                         <h3>Wi-Fi Direct &amp; QR Handoff</h3>
                     </div>
                     <span class="tech-pill">Routerless P2P</span>
@@ -350,29 +412,29 @@
 
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon"><i data-lucide="cpu"></i></div>
+                        <div class="tech-icon icon-purple"><i data-lucide="cpu"></i></div>
                         <h3>Flutter + Native Kotlin &amp; C++</h3>
                     </div>
                     <span class="tech-pill">Cross-Platform Stack</span>
-                    <p>Compiled natively via Flutter with custom Kotlin platform channels on Android (MediaStore, installed APK export) and a Windows C++ desktop runner with drag-and-drop &amp; system tray.</p>
+                    <p>Compiled natively via Flutter with custom Kotlin platform channels on Android (MediaStore, installed APK export) and native desktop runners for Windows and Linux.</p>
                 </div>
 
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon green"><i data-lucide="shield-off"></i></div>
+                        <div class="tech-icon icon-emerald"><i data-lucide="shield-off"></i></div>
                         <h3>Zero Cloud, Zero Ads, Zero Tracking</h3>
                     </div>
                     <span class="tech-pill">Strict Local Privacy</span>
-                    <p>SendSnap has no analytics SDKs, no ad networks, and no login servers. Your personal files travel only between devices inside your room.</p>
+                    <p>SendSnap has no analytics SDKs, no ad networks, and no login servers. Your personal files travel only between devices in the room.</p>
                 </div>
 
                 <div class="tech-card">
                     <div class="tech-head">
-                        <div class="tech-icon yellow"><i data-lucide="palette"></i></div>
-                        <h3>Sketch Ink UI &amp; 4 Languages</h3>
+                        <div class="tech-icon icon-blue"><i data-lucide="palette"></i></div>
+                        <h3>Modern UI &amp; 4 Languages</h3>
                     </div>
                     <span class="tech-pill">UX &amp; Accessibility</span>
-                    <p>Crafted in Clean Comic / Marker Sketch style with Light &amp; Dark Mode, Google Files-style Recents, Desktop Multi-File Finish Studio, and full EN/FR/AR (RTL)/ES support.</p>
+                    <p>Crafted with a sleek minimalist UI with Light &amp; Dark mode, Google Files-style Recents, Desktop Multi-File Finish Studio, and full EN/FR/AR (RTL)/ES support.</p>
                 </div>
             </div>
         </section>
@@ -488,64 +550,57 @@
         <section class="container">
             <div class="cta-banner">
                 <h2>Ready to Share Without Limits?</h2>
-                <p>Get SendSnap on Android, Windows PC, and Linux — fast, offline, open source on GitHub, and 100% ad-free.</p>
-                <div class="cta-buttons">
-                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="btn-playstore">
-                        <svg viewBox="0 0 512 512" fill="currentColor">
-                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#00D2FF"/>
-                        </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">GET IT ON</span>
-                            <span class="btn-text-large">Google Play</span>
-                        </div>
-                    </a>
-
-                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="btn-windows">
-                        <svg viewBox="0 0 88 88" fill="currentColor">
+                <p>Get SendSnap on Android, Windows PC, and Linux — fast, offline, and 100% ad-free.</p>
+                <div class="cta-platforms-row">
+                    <a href="downloads/sendsnap-windows-x64.zip" download="sendsnap-windows-x64.zip" class="cta-platform-btn">
+                        <svg viewBox="0 0 88 88" fill="currentColor" class="cta-svg">
                             <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.001 45.728zm4.326-39.027L87.914 0v41.527l-47.918.376zm47.919 45.434V88l-47.919-6.734-.015-34.871z"/>
                         </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">WINDOWS PC</span>
-                            <span class="btn-text-large">Download (.zip)</span>
+                        <div class="cta-btn-text">
+                            <span class="cta-platform-name">Windows PC</span>
+                            <span class="cta-format">Download (.zip)</span>
                         </div>
                     </a>
 
-                    <a href="downloads/SendSnap-x86_64.AppImage" download="SendSnap-x86_64.AppImage" class="btn-linux">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                    <a href="downloads/SendSnap-x86_64.AppImage" download="SendSnap-x86_64.AppImage" class="cta-platform-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="cta-svg">
                             <path d="M12.504 0c-.155 0-.313.008-.471.02-3.134.256-4.99 2.47-5.021 5.92-.016 1.77.37 3.518.73 5.228-.68.618-1.36 1.258-1.996 1.942-1.42 1.528-2.584 3.328-3.32 5.318-.46 1.246-.713 2.56-.708 3.918 0 .428.17.84.472 1.142.302.303.714.472 1.142.472 1.488 0 2.918-.456 4.14-1.317 1.348.887 2.923 1.357 4.528 1.357s3.18-.47 4.528-1.357c1.222.86 2.652 1.317 4.14 1.317.428 0 .84-.17 1.142-.472.303-.302.472-.714.472-1.142.005-1.358-.248-2.672-.708-3.918-.736-1.99-1.9-3.79-3.32-5.318-.636-.684-1.316-1.324-1.996-1.942.36-1.71.746-3.458.73-5.228-.031-3.45-1.887-5.664-5.02-5.92-.158-.012-.316-.02-.472-.02zm-.004 2c2.09.006 3.004 1.442 3.024 3.957.012 1.54-.34 3.197-.684 4.813l-.13.61.5.378c.867.658 1.7 1.378 2.477 2.152 1.248 1.244 2.247 2.723 2.87 4.316.33.844.53 1.74.58 2.656-.84-.162-1.722-.508-2.52-1.026l-.68-.44-.658.472c-1.372.985-2.99 1.508-4.66 1.508s-3.288-.523-4.66-1.508l-.658-.472-.68.44c-.798.518-1.68.864-2.52 1.026.05-.916.25-1.812.58-2.656.623-1.593 1.622-3.072 2.87-4.316.777-.774 1.61-1.494 2.477-2.152l.5-.378-.13-.61c-.344-1.616-.696-3.273-.684-4.813.02-2.515.934-3.951 3.024-3.957z"/>
                         </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">LINUX x64</span>
-                            <span class="btn-text-large">Download (.AppImage)</span>
+                        <div class="cta-btn-text">
+                            <span class="cta-platform-name">Linux x64</span>
+                            <span class="cta-format">Download (.AppImage)</span>
                         </div>
                     </a>
 
-                    <a href="downloads/sendsnap_2.2.9_amd64.deb" download="sendsnap_2.2.9_amd64.deb" class="btn-secondary">
-                        <i data-lucide="package" style="width: 18px; height: 18px;"></i>
-                        <span>Linux (.deb)</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.the356company.sendsnap" target="_blank" rel="noopener noreferrer" class="cta-platform-btn">
+                        <svg viewBox="0 0 512 512" fill="currentColor" class="cta-svg">
+                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                        </svg>
+                        <div class="cta-btn-text">
+                            <span class="cta-platform-name">Google Play</span>
+                            <span class="cta-format">Android 7.0+</span>
+                        </div>
                     </a>
-
-                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar" class="btn-secondary">
-                        <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
-                        <span>Windows (.rar)</span>
-                    </a>
-
-                    <a href="downloads/sendsnap-linux-x64.tar.gz" download="sendsnap-linux-x64.tar.gz" class="btn-secondary">
-                        <i data-lucide="archive" style="width: 18px; height: 18px;"></i>
-                        <span>Linux (.tar.gz)</span>
-                    </a>
+                </div>
+                <div class="cta-secondary-formats">
+                    <span>Other downloads:</span>
+                    <a href="downloads/sendsnap_2.2.9_amd64.deb" download="sendsnap_2.2.9_amd64.deb">Linux .deb</a>
+                    <span>•</span>
+                    <a href="downloads/sendsnap-linux-x64.tar.gz" download="sendsnap-linux-x64.tar.gz">Linux .tar.gz</a>
+                    <span>•</span>
+                    <a href="downloads/sendsnap-windows-x64.rar" download="sendsnap-windows-x64.rar">Windows .rar</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer id="main-footer">
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="index.html" class="logo-wrapper">
-                    <img src="assets/app_icon.png" alt="SendSnap Icon" class="logo-icon" style="width: 32px; height: 32px;">
-                    <span class="logo-text" style="font-size: 1.18rem;">SendSnap</span>
+                    <img src="assets/app_icon.png" alt="SendSnap Icon" class="logo-icon" style="width: 28px; height: 28px;">
+                    <span class="logo-text" style="font-size: 1.15rem;">SendSnap</span>
                 </a>
                 <p>Fast offline peer-to-peer file &amp; app sharing for Android, Windows PC, and Linux.</p>
             </div>
@@ -560,10 +615,10 @@
                 <a href="mailto:nejiyoussef081@gmail.com">Support</a>
             </div>
 
-            <p>&copy; 2026 The 356 Company • SendSnap v2.2.9</p>
+            <p class="copyright">&copy; 2026 The 356 Company • SendSnap v2.2.9</p>
         </div>
     </footer>
 
-    <script src="script.js?v=2.2.9-linux"></script>
+    <script src="script.js?v=2.3.0"></script>
 </body>
 </html>
