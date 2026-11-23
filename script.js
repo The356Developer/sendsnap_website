@@ -29,35 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Mobile Navigation Menu Toggle
+    // 2. Mobile Navigation Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const navMenu = document.getElementById('nav-menu');
 
-    if (mobileToggle && navLinks) {
+    if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+            navMenu.classList.toggle('show');
         });
 
-        navLinks.querySelectorAll('a').forEach(link => {
+        navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('show');
+                navMenu.classList.remove('show');
             });
         });
     }
 
-    // 3. Header Scroll Elevation
-    const header = document.getElementById('main-header');
-    if (header) {
+    // 3. Navbar Scroll Elevation
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                header.classList.add('scrolled');
+                navbar.style.boxShadow = 'var(--shadow-card)';
             } else {
-                header.classList.remove('scrolled');
+                navbar.style.boxShadow = 'none';
             }
         }, { passive: true });
     }
 
-    // 4. Platform Download Tabs & OS Auto-Detection
+    // 4. Download Station Platform Tabs & OS Auto-Detection
     function detectPlatform() {
         const ua = (navigator.userAgent || '').toLowerCase();
         if (/android/i.test(ua)) return 'android';
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'windows';
     }
 
-    function switchPlatformTab(platform) {
-        const tabs = document.querySelectorAll('.platform-tab');
-        const panels = document.querySelectorAll('.platform-panel');
+    function switchStationTab(platform) {
+        const tabs = document.querySelectorAll('.station-tab');
+        const panels = document.querySelectorAll('.station-panel');
 
         tabs.forEach(tab => {
             const matches = tab.getAttribute('data-platform') === platform;
@@ -86,32 +86,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const platformTabs = document.querySelectorAll('.platform-tab');
-    if (platformTabs.length > 0) {
-        platformTabs.forEach(tab => {
+    const stationTabs = document.querySelectorAll('.station-tab');
+    if (stationTabs.length > 0) {
+        stationTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const platform = tab.getAttribute('data-platform');
                 if (platform) {
-                    switchPlatformTab(platform);
+                    switchStationTab(platform);
                 }
             });
         });
 
-        // Set default based on detected OS
+        // Auto-select detected OS
         const detected = detectPlatform();
-        switchPlatformTab(detected);
+        switchStationTab(detected);
     }
 
     // 5. FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        if (question) {
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                faqItems.forEach(other => other.classList.remove('active'));
-                if (!isActive) {
-                    item.classList.add('active');
+    const faqRows = document.querySelectorAll('.faq-row');
+    faqRows.forEach(row => {
+        const trigger = row.querySelector('.faq-trigger');
+        if (trigger) {
+            trigger.addEventListener('click', () => {
+                const isOpen = row.classList.contains('active');
+                faqRows.forEach(other => other.classList.remove('active'));
+                if (!isOpen) {
+                    row.classList.add('active');
                 }
             });
         }
@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             if (!targetId || targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
                 e.preventDefault();
-                targetElement.scrollIntoView({
+                targetEl.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
