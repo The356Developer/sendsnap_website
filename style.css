@@ -4,7 +4,7 @@
    - Deep Cosmic Twilight Background (#07081F -> #0B0E33 -> #1B2082)
    - Electric Cobalt (#2B50EC), Neon Violet (#7C3AED), Amber Gold (#FFB800)
    - Glowing Glassmorphic Game Cards with Tactile Elevation
-   - Font: 'Outfit' (Geometric, Bold, Punchy) + 'JetBrains Mono' for Telemetry
+   - Font: 'Montserrat' (Clean, Modern, Geometric) + 'JetBrains Mono' for Telemetry
    ========================================================================== */
 
 :root {
@@ -75,7 +75,7 @@ html {
 }
 
 body {
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--bg-base);
     color: var(--text-main);
     line-height: 1.6;
