@@ -260,6 +260,7 @@ nav {
 
 .btn-playstore,
 .btn-windows,
+.btn-linux,
 .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -289,6 +290,15 @@ nav {
     color: #FFFFFF !important;
 }
 
+.btn-linux {
+    background: #E95420;
+    color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .btn-linux {
+    background: #E95420;
+}
+
 .btn-secondary {
     background: var(--surface);
     color: var(--text-primary) !important;
@@ -296,13 +306,15 @@ nav {
 
 .btn-playstore:hover,
 .btn-windows:hover,
+.btn-linux:hover,
 .btn-secondary:hover {
     transform: translate(2px, 2.5px);
     box-shadow: 2px 2.5px 0 var(--shadow-color);
 }
 
 .btn-playstore svg,
-.btn-windows svg {
+.btn-windows svg,
+.btn-linux svg {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
