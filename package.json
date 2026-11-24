@@ -1,0 +1,16 @@
+{
+  "name": "sendsnap-website",
+  "version": "2.2.9",
+  "description": "SendSnap — Share Anything in a Snap (Android, Windows & Linux)",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["sendsnap", "file-transfer", "p2p"],
+  "author": "The 356 Company",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
