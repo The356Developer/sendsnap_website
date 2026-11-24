@@ -257,6 +257,14 @@ code {
     align-items: center;
 }
 
+.hero-text,
+.hero-card,
+.dl-card,
+.step-card,
+.preview-card {
+    min-width: 0;
+}
+
 .pill {
     display: inline-flex;
     align-items: center;
@@ -827,6 +835,9 @@ code {
 
     .btn-lg {
         width: 100%;
+        white-space: normal;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
     .legal-card {
